@@ -33,7 +33,7 @@
 </p>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About
 
 This project exists to streamline Pax8 interactions and provide a way to automate tasks within the platform.
 
@@ -43,7 +43,7 @@ This project exists to streamline Pax8 interactions and provide a way to automat
 
 The Pax8 REST API requires a `Developer Application` to authenticate and make requests. This provides a `client_id` and `client_secret` which is used in this module to connect to the API.
 
-_For more information, please refer to the [Pax8 Documentation](https://docs.pax8.com/api/v1#section/Create-a-Developer-Application)_
+_For more information, please refer to the [Pax8 documentation](https://docs.pax8.com/api/v1#section/Create-a-Developer-Application)_.
 
 ### Installation
 
@@ -61,7 +61,7 @@ Run the initial connect command:
 Connect-Pax8 -credential <client_id>
 ```
 
-_For a complete list of commands, please refer to the [Documentation](https://github.com/dkschruteBeets/Pax8-API/blob/master/Pax8-API.md)_
+_For a complete list of commands, please refer to the [documentation](https://github.com/dkschruteBeets/Pax8-API/blob/master/Pax8-API.md)_.
 
 
 <!-- CONTRIBUTING -->
