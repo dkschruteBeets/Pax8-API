@@ -8,7 +8,7 @@ jobs:
       steps:
         - uses: actions/checkout@v1
         - name: Publish
-          env:
+          with:
             APIKEY: ${{ secrets.PSGALLERYAPIKEY }}
           run: .\Publish.ps1
           shell: pwsh
