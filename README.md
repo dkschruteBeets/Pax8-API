@@ -20,7 +20,7 @@
 <!-- PROJECT SHIELDS -->
 <div align="center">
 
-[![Forks][forks-shield]][forks-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url]
+[![Forks][forks-shield]][forks-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url] [![PS Gallery][ps-shield]][ps-url]
 
 </div>
 
@@ -94,5 +94,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [forks-url]: https://github.com/dkschruteBeets/Pax8-API/network/members
 [issues-shield]: https://img.shields.io/github/issues/dkschruteBeets/Pax8-API?color=%2344d62c&logo=GitHub
 [issues-url]: https://github.com/dkschruteBeets/Pax8-API/issues
-[license-shield]: https://img.shields.io/github/license/dkschruteBeets/Pax8-API?color=%2344d62c&logo=GitHub
+[license-shield]: https://img.shields.io/github/license/dkschruteBeets/Pax8-API?color=%2344d62c&label=license&logo=GitHub
 [license-url]: https://github.com/dkschruteBeets/Pax8-API/blob/master/LICENSE.txt
+[ps-shield]: https://img.shields.io/powershellgallery/v/Pax8-API?color=%2344d62c&label=PS%20Gallery&logo=powershell&logoColor=white
+[ps-url]: https://www.powershellgallery.com/packages/Pax8-API
