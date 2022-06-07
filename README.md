@@ -12,7 +12,7 @@
   <p align="center">
     A PowerShell Module for the <a href="https://docs.pax8.com/api/v1"><strong>Pax8 REST API</strong></a>
     <br />
-    <a href="https://github.com/dkschruteBeets/Pax8-API/Pax8-API.md"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/dkschruteBeets/Pax8-API/blob/master/Pax8-API.md"><strong>Explore the docs »</strong></a>
     <br />
   </p>
 </div>
@@ -61,7 +61,7 @@ Run the initial connect command:
 Connect-Pax8 -credential <client_id>
 ```
 
-_For more examples, please refer to the [Documentation](https://github.com/dkschruteBeets/Pax8-API/Docs)_
+_For a complete list of commands, please refer to the [Documentation](https://github.com/dkschruteBeets/Pax8-API/blob/master/Pax8-API.md)_
 
 
 <!-- CONTRIBUTING -->
