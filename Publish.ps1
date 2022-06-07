@@ -1,2 +1,1 @@
-$ModulePath = "$PSScriptRoot\Pax8-API"
-Publish-Module -Path $ModulePath -NuGetApiKey $Env:APIKEY
+Publish-Module -Path "$PSScriptRoot" -NuGetApiKey $Env:APIKEY
