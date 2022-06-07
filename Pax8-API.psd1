@@ -12,7 +12,7 @@
 RootModule = 'Pax8-API.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.0'
+ModuleVersion = '0.1.1'
 
 # Supported PSEditions
 CompatiblePSEditions = 'Desktop', 'Core'
@@ -129,7 +129,7 @@ PrivateData = @{
         Tags = @('dkschruteBeets', 'Pax8', 'REST', 'API')
 
         # A URL to the license for this module.
-        LicenseUri = 'https://github.com/dkschruteBeets/Pax8-API/blob/master/LICENSE.md'
+        LicenseUri = 'https://github.com/dkschruteBeets/Pax8-API/blob/master/LICENSE.txt'
 
         # A URL to the main website for this project.
         ProjectUri = 'https://github.com/dkschruteBeets/Pax8-API'
