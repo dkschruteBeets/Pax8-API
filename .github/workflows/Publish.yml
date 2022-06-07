@@ -9,6 +9,6 @@ jobs:
         - uses: actions/checkout@v1
         - name: Publish
           env:
-            APIKEY: ${{ secrets.PS_GALLERY_API_KEY }}
+            APIKEY: ${{ secrets.PSGALLERYAPIKEY }}
           run: .\Publish.ps1
           shell: pwsh
