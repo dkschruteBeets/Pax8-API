@@ -12,7 +12,7 @@ Returns pricing information for a particular product.
 
 ## SYNTAX
 
-```
+```powershell
 Get-Pax8ProductPricing [-productId] <String> [[-companyId] <String>] [<CommonParameters>]
 ```
 

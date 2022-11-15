@@ -12,7 +12,7 @@ Invokes an `Update` request.
 
 ## SYNTAX
 
-```
+```powershell
 Invoke-Pax8UpdateRequest [[-Arguments] <Object>] [[-EndPoint] <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```

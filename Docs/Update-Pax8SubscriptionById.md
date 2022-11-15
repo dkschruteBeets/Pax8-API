@@ -12,7 +12,7 @@ Updates a specified subscription by Id.
 
 ## SYNTAX
 
-```
+```powershell
 Update-Pax8SubscriptionById [-subscriptionId] <String> [-quantity] <Int32> [-startDate] <String>
  [[-endDate] <String>] [[-price] <Double>] [-billingTerm] <String> [[-provisioningDetails] <Array>] [-WhatIf]
  [-Confirm] [<CommonParameters>]

@@ -12,7 +12,7 @@ Returns provisioning details for a specific product.
 
 ## SYNTAX
 
-```
+```powershell
 Get-Pax8ProductProvisioningDetail [-productId] <String> [<CommonParameters>]
 ```
 

@@ -12,7 +12,7 @@ Returns a product by Id.
 
 ## SYNTAX
 
-```
+```powershell
 Get-Pax8ProductById [-productId] <String> [<CommonParameters>]
 ```
 

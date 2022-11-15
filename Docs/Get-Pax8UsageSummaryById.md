@@ -12,7 +12,7 @@ Returns a usage summary by Id.
 
 ## SYNTAX
 
-```
+```powershell
 Get-Pax8UsageSummaryById [-usageSummaryId] <String> [<CommonParameters>]
 ```
 

@@ -12,7 +12,7 @@ Returns associated dependencies for the specified product.
 
 ## SYNTAX
 
-```
+```powershell
 Get-Pax8ProductDependency [-productId] <String> [<CommonParameters>]
 ```
 

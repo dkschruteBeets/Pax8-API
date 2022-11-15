@@ -12,7 +12,7 @@ Cancels a subscription by Id.
 
 ## SYNTAX
 
-```
+```powershell
 Remove-Pax8SubscriptionById [-subscriptionId] <String> [[-cancelDate] <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```

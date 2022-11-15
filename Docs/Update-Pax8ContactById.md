@@ -12,7 +12,7 @@ Updates contact information by Id.
 
 ## SYNTAX
 
-```
+```powershell
 Update-Pax8ContactById [-companyId] <String> [-contactId] <String> [-firstName] <String> [-lastName] <String>
  [-email] <String> [-phone] <String> [[-types] <Array>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

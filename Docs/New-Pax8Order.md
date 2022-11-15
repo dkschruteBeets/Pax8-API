@@ -12,7 +12,7 @@ Creates a new order for a specified company.
 
 ## SYNTAX
 
-```
+```powershell
 New-Pax8Order [-companyId] <String> [[-orderedBy] <String>] [[-orderedByUserEmail] <String>]
  [-lineItems] <Array> [[-isMock] <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

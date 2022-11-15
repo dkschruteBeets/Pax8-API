@@ -12,7 +12,7 @@ Returns a subscription by subscription Id.
 
 ## SYNTAX
 
-```
+```powershell
 Get-Pax8SubscriptionById [-subscriptionId] <String> [<CommonParameters>]
 ```
 

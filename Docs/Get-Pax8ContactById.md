@@ -12,7 +12,7 @@ Returns a single contact from a company by Id.
 
 ## SYNTAX
 
-```
+```powershell
 Get-Pax8ContactById [-companyId] <String> [-contactId] <String> [<CommonParameters>]
 ```
 

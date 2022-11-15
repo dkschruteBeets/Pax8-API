@@ -12,7 +12,7 @@ Returns a paginated list of usage lines for a usage summary.
 
 ## SYNTAX
 
-```
+```powershell
 Get-Pax8UsageSummaryLine [-usageSummaryId] <String> [-usageDate] <String> [[-productId] <String>]
  [<CommonParameters>]
 ```

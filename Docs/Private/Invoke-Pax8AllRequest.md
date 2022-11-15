@@ -12,7 +12,7 @@ Invokes a `Get` request to return all results.
 
 ## SYNTAX
 
-```
+```powershell
 Invoke-Pax8AllRequest [[-Arguments] <Object>] [<CommonParameters>]
 ```
 

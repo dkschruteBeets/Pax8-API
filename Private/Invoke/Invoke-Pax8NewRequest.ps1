@@ -31,7 +31,7 @@
 			$body.Add('email', $Arguments.email)
 		}
 		'name' {
-			$body.Add('name', $Arguments.body)
+			$body.Add('name', $Arguments.name)
 		}
 		'address' {
 			$body.Add('address', $Arguments.address)

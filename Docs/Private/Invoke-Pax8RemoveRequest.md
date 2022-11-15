@@ -12,7 +12,7 @@ Invokes a `Remove` request.
 
 ## SYNTAX
 
-```
+```powershell
 Invoke-Pax8RemoveRequest [[-Arguments] <Object>] [[-EndPoint] <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```

@@ -12,7 +12,7 @@ Returns an invoice by Id.
 
 ## SYNTAX
 
-```
+```powershell
 Get-Pax8InvoiceById [-invoiceId] <String> [<CommonParameters>]
 ```
 

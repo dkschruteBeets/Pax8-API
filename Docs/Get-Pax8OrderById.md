@@ -12,7 +12,7 @@ Returns order details by Id.
 
 ## SYNTAX
 
-```
+```powershell
 Get-Pax8OrderById [-orderId] <String> [<CommonParameters>]
 ```
 

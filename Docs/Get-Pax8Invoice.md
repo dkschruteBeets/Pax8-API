@@ -13,14 +13,14 @@ Returns a paginated list of invoices.
 ## SYNTAX
 
 ### Paging (Default)
-```
+```powershell
 Get-Pax8Invoice [-page <Int32>] [-size <Int32>] [-sort <String>] [-status <String>] [-invoiceDate <String>]
  [-invoiceDateRangeStart <String>] [-invoiceDateRangeEnd <String>] [-dueDate <String>] [-total <Double>]
  [-balance <Double>] [-carriedBalance <Double>] [-companyId <String>] [<CommonParameters>]
 ```
 
 ### All
-```
+```powershell
 Get-Pax8Invoice [-sort <String>] [-status <String>] [-invoiceDate <String>] [-invoiceDateRangeStart <String>]
  [-invoiceDateRangeEnd <String>] [-dueDate <String>] [-total <Double>] [-balance <Double>]
  [-carriedBalance <Double>] [-companyId <String>] [-all] [<CommonParameters>]

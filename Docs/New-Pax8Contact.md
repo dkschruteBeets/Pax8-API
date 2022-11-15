@@ -12,7 +12,7 @@ Creates a new contact for a company.
 
 ## SYNTAX
 
-```
+```powershell
 New-Pax8Contact [-companyId] <String> [-firstName] <String> [-lastName] <String> [-email] <String>
  [-phone] <String> [[-types] <Array>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

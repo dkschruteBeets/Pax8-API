@@ -12,7 +12,7 @@ Returns a Microsoft 365 tenant Id.
 
 ## SYNTAX
 
-```
+```powershell
 Get-Pax8Company365TenantId [-companyId] <String> [<CommonParameters>]
 ```
 

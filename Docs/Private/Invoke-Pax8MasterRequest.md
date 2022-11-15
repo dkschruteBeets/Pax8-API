@@ -12,7 +12,7 @@ Invokes requests called by all private functions.
 
 ## SYNTAX
 
-```
+```powershell
 Invoke-Pax8MasterRequest [[-Arguments] <Object>] [<CommonParameters>]
 ```
 

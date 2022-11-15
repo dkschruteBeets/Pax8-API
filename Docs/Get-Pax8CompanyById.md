@@ -12,7 +12,7 @@ Returns a single company record matching the company Id.
 
 ## SYNTAX
 
-```
+```powershell
 Get-Pax8CompanyById [-companyId] <String> [<CommonParameters>]
 ```
 

@@ -12,7 +12,7 @@ Creates a new company.
 
 ## SYNTAX
 
-```
+```powershell
 New-Pax8Company [-name] <String> [-address] <Object> [-phone] <String> [-website] <String>
  [[-externalId] <String>] [-billOnBehalfOfEnabled] <Boolean> [-selfServiceAllowed] <Boolean>
  [-orderApprovedRequired] <Boolean> [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -32,6 +32,7 @@ $newParams = @{
         city            = 'Austin'
         postalCode      = 78744
         stateOrProvince = 'Texas'
+        country         = 'US'
     }
     phone                 = '999-999-9999'
     website               = 'initech.lumbergh.co'

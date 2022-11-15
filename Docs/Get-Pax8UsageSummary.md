@@ -13,13 +13,13 @@ Returns a paginated list of usage summaries.
 ## SYNTAX
 
 ### Paging (Default)
-```
+```powershell
 Get-Pax8UsageSummary -subscriptionId <String> [-page <Int32>] [-size <Int32>] [-sort <String>]
  [-resourceGroup <String>] [-companyId <String>] [<CommonParameters>]
 ```
 
 ### All
-```
+```powershell
 Get-Pax8UsageSummary -subscriptionId <String> [-sort <String>] [-resourceGroup <String>] [-companyId <String>]
  [-all] [<CommonParameters>]
 ```

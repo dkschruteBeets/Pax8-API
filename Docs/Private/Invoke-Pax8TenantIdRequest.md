@@ -12,7 +12,7 @@ Invokes a `Get` request to retrieve a Microsoft 365 tenant Id.
 
 ## SYNTAX
 
-```
+```powershell
 Invoke-Pax8TenantIdRequest [[-Arguments] <Object>] [[-EndPoint] <String>] [<CommonParameters>]
 ```
 

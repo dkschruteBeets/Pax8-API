@@ -12,7 +12,7 @@ Disconnects the current session.
 
 ## SYNTAX
 
-```
+```powershell
 Disconnect-Pax8 [<CommonParameters>]
 ```
 

@@ -12,7 +12,7 @@ Returns the history of a subscription by Id.
 
 ## SYNTAX
 
-```
+```powershell
 Get-Pax8SubscriptionHistoryById [-subscriptionId] <String> [<CommonParameters>]
 ```
 

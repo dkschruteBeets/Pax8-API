@@ -13,13 +13,13 @@ Returns a paginated list of subscriptions.
 ## SYNTAX
 
 ### Paging (Default)
-```
+```powershell
 Get-Pax8Subscription [-page <Int32>] [-size <Int32>] [-sort <String>] [-status <String>]
  [-billingTerm <String>] [-companyId <String>] [-productId <String>] [<CommonParameters>]
 ```
 
 ### All
-```
+```powershell
 Get-Pax8Subscription [-sort <String>] [-status <String>] [-billingTerm <String>] [-companyId <String>]
  [-productId <String>] [-all] [<CommonParameters>]
 ```

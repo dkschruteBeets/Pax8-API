@@ -4180,6 +4180,7 @@ Connect-Pax8 -credential $cred</dev:code>
         city            = 'Austin'
         postalCode      = 78744
         stateOrProvince = 'Texas'
+        country         = 'US'
     }
     phone                 = '999-999-9999'
     website               = 'initech.lumbergh.co'

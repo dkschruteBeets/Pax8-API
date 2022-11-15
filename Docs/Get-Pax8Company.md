@@ -13,14 +13,14 @@ Returns a paginated list of companies.
 ## SYNTAX
 
 ### Paging (Default)
-```
+```powershell
 Get-Pax8Company [-page <Int32>] [-size <Int32>] [-sort <String>] [-city <String>] [-country <String>]
  [-stateOrProvince <String>] [-postalCode <String>] [-selfServiceAllowed <Boolean>]
  [-billOnBehalfOfEnabled <Boolean>] [-orderApprovalRequired <Boolean>] [-status <String>] [<CommonParameters>]
 ```
 
 ### All
-```
+```powershell
 Get-Pax8Company [-sort <String>] [-city <String>] [-country <String>] [-stateOrProvince <String>]
  [-postalCode <String>] [-selfServiceAllowed <Boolean>] [-billOnBehalfOfEnabled <Boolean>]
  [-orderApprovalRequired <Boolean>] [-status <String>] [-all] [<CommonParameters>]

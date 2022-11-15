@@ -12,7 +12,7 @@ Deletes a contact from a company by Id.
 
 ## SYNTAX
 
-```
+```powershell
 Remove-Pax8ContactById [-companyId] <String> [-contactId] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

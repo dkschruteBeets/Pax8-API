@@ -12,7 +12,7 @@ Invokes a `New` request.
 
 ## SYNTAX
 
-```
+```powershell
 Invoke-Pax8NewRequest [[-Arguments] <Object>] [[-EndPoint] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

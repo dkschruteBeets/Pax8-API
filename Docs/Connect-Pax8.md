@@ -12,7 +12,7 @@ Authenticates to the Pax8 REST API.
 
 ## SYNTAX
 
-```
+```powershell
 Connect-Pax8 [-credential] <PSCredential> [<CommonParameters>]
 ```
 

@@ -13,12 +13,12 @@ Returns a paginated list of contacts from a company, ordered by 'createDate' des
 ## SYNTAX
 
 ### Paging (Default)
-```
+```powershell
 Get-Pax8Contact -companyId <String> [-page <Int32>] [-size <Int32>] [<CommonParameters>]
 ```
 
 ### All
-```
+```powershell
 Get-Pax8Contact -companyId <String> [-all] [<CommonParameters>]
 ```
 

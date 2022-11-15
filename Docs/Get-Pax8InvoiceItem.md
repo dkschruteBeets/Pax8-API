@@ -13,12 +13,12 @@ Returns a paginated list of items for an invoice.
 ## SYNTAX
 
 ### Paging (Default)
-```
+```powershell
 Get-Pax8InvoiceItem -invoiceId <String> [-page <Int32>] [-size <Int32>] [<CommonParameters>]
 ```
 
 ### All
-```
+```powershell
 Get-Pax8InvoiceItem -invoiceId <String> [-all] [<CommonParameters>]
 ```
 

@@ -13,12 +13,12 @@ Returns a paginated list of orders associated with your partner.
 ## SYNTAX
 
 ### Paging (Default)
-```
+```powershell
 Get-Pax8Order [-page <Int32>] [-size <Int32>] [-companyId <String>] [<CommonParameters>]
 ```
 
 ### All
-```
+```powershell
 Get-Pax8Order [-companyId <String>] [-all] [<CommonParameters>]
 ```
 

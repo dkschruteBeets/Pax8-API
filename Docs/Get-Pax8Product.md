@@ -13,12 +13,12 @@ Returns a paginated list of Pax8 products.
 ## SYNTAX
 
 ### Paging (Default)
-```
+```powershell
 Get-Pax8Product [-page <Int32>] [-size <Int32>] [-sort <String>] [-vendorName <String>] [<CommonParameters>]
 ```
 
 ### All
-```
+```powershell
 Get-Pax8Product [-sort <String>] [-vendorName <String>] [-all] [<CommonParameters>]
 ```
 
