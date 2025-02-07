@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/dkschruteBeets/Pax8-API">
-    <img src="Images/PAX8_Logo.png" alt="Logo" width="600" height="400">
+    <img src="Images/PAX8_Logo.png" alt="Logo" style="max-width: 100%; height: auto; width: auto; max-height: 400px;">
   </a>
 
 <h2 align="center">Pax8 REST API</h2>
