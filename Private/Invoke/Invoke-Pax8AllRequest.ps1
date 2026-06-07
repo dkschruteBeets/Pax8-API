@@ -1,11 +1,11 @@
-﻿function Invoke-Pax8AllRequest {
+function Invoke-Pax8AllRequest {
     [CmdletBinding()]
     param (
         $Arguments
     )
 
     [System.Collections.Generic.List[object]]$result = @()
-    $pageNum = 0 
+    $pageNum = 0
 
     if ($Arguments.Uri -match '\?') {
         $Arguments.Uri += "&page=$($pageNum)&size=200"
@@ -24,7 +24,7 @@
             $Arguments.Uri = $Arguments.Uri -replace "page=\d*", "page=$($pageNum)"
             $response = Invoke-Pax8MasterRequest -Arguments $Arguments
 
-            if ($response.content) {
+            if ($response.PSObject.Properties['content']) {
                 $result.Add($response)
                 $pageNum++
             } else {
@@ -34,6 +34,6 @@
     } else {
         $result.Add($response)
     }
-    
+
     $result
 }

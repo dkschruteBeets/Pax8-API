@@ -1,4 +1,4 @@
-function Get-Pax8Order {
+function Get-Pax8InvoiceDraftItem {
     [CmdletBinding(DefaultParameterSetName = 'Paging')]
     param (
         [Parameter(ParameterSetName = 'Paging')]
@@ -8,12 +8,19 @@ function Get-Pax8Order {
         [ValidateRange(1, 200)]
         [int]$size,
 
+        [ValidateRange(0, 1)]
+        [int]$monthOffset = 1,
+
         [guid]$companyId,
 
         [Parameter(ParameterSetName = 'All')]
         [switch]$all
     )
 
-    $endPoint = 'orders'
+    $endPoint = 'invoices/draftItems'
+    if (-not $PSBoundParameters.ContainsKey('monthOffset')) {
+        $PSBoundParameters['monthOffset'] = $monthOffset
+    }
+
     Invoke-Pax8GetRequest -Arguments $PSBoundParameters -EndPoint $endPoint
 }

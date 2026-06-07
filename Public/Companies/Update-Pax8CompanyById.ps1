@@ -1,33 +1,27 @@
-function New-Pax8Company {
+function Update-Pax8CompanyById {
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSShouldProcess', '')]
     [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
     param (
         [Parameter(Mandatory)]
+        [guid]$companyId,
+
         [string]$name,
 
-        [Parameter(Mandatory)]
         [object]$address,
 
-        [Parameter(Mandatory)]
         [string]$phone,
 
-        [Parameter(Mandatory)]
         [string]$website,
 
         [string]$externalId,
 
-        [Parameter(Mandatory)]
         [bool]$billOnBehalfOfEnabled,
 
-        [Parameter(Mandatory)]
         [bool]$selfServiceAllowed,
 
-        [Parameter(Mandatory)]
-        [bool]$orderApprovalRequired,
-
-        [array]$contacts
+        [bool]$orderApprovalRequired
     )
 
-    $endPoint = 'companies'
-    Invoke-Pax8NewRequest -Arguments $PSBoundParameters -EndPoint $endPoint
+    $endPoint = "companies/$($companyId)"
+    Invoke-Pax8UpdateRequest -Arguments $PSBoundParameters -EndPoint $endPoint -Method Patch
 }

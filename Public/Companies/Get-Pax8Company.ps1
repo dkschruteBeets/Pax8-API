@@ -1,54 +1,52 @@
-﻿function Get-Pax8Company {
-	[CmdletBinding(DefaultParameterSetName = 'Paging')]
-	param (
-		[Parameter(ParameterSetName = 'Paging')]
-		[int]$page,
+function Get-Pax8Company {
+    [CmdletBinding(DefaultParameterSetName = 'Paging')]
+    param (
+        [Parameter(ParameterSetName = 'Paging')]
+        [int]$page,
 
-		[Parameter(ParameterSetName = 'Paging')]
-		[ValidateRange(1, 200)]
-		[int]$size,
+        [Parameter(ParameterSetName = 'Paging')]
+        [ValidateRange(1, 200)]
+        [int]$size,
 
-		[ValidateSet('name', 'city', 'country', 'stateOrProvince', 'postalCode')]
-		[string]$sort,
+        [string]$sort,
 
-		[string]$city,
+        [string]$city,
 
-		[string]$country,
+        [string]$country,
 
-		[string]$stateOrProvince,
+        [string]$stateOrProvince,
 
-		[string]$postalCode,
+        [string]$postalCode,
 
-		[bool]$selfServiceAllowed,
+        [bool]$selfServiceAllowed,
 
-		[bool]$billOnBehalfOfEnabled,
+        [bool]$billOnBehalfOfEnabled,
 
-		[bool]$orderApprovalRequired,
+        [bool]$orderApprovalRequired,
 
-		[ValidateSet('Active', 'Inactive', 'Deleted')]
-		[string]$status,
-		
-		[Parameter(ParameterSetName = 'All')]
-		[switch]$all
-	)
+        [string]$status,
 
-	dynamicparam {
-		if ($PSBoundParameters.ContainsKey('sort')) {
-			$dynParamDictionary = [System.Management.Automation.RuntimeDefinedParameterDictionary]::new()		
-			$dynParam = [System.Management.Automation.RuntimeDefinedParameter]::new('direction', [string], [System.Attribute[]]@(
-					[Parameter]@{Position = 0}
-					[ValidateSet]::new('asc', 'desc')
-				))
-			$dynParamDictionary.Add($dynParam.Name, $dynParam)
-			$dynParamDictionary			
-		}
-	}
-	
-	begin {
-		$endPoint = 'companies'
-	}
+        [Parameter(ParameterSetName = 'All')]
+        [switch]$all
+    )
 
-	process {
-		Invoke-Pax8GetRequest -Arguments $PSBoundParameters -EndPoint $endPoint
-	}
+    dynamicparam {
+        if ($PSBoundParameters.ContainsKey('sort')) {
+            $dynParamDictionary = [System.Management.Automation.RuntimeDefinedParameterDictionary]::new()
+            $dynParam = [System.Management.Automation.RuntimeDefinedParameter]::new('direction', [string], [System.Attribute[]]@(
+                    [Parameter]@{Position = 0 }
+                    [ValidateSet]::new('asc', 'desc')
+                ))
+            $dynParamDictionary.Add($dynParam.Name, $dynParam)
+            $dynParamDictionary
+        }
+    }
+
+    begin {
+        $endPoint = 'companies'
+    }
+
+    process {
+        Invoke-Pax8GetRequest -Arguments $PSBoundParameters -EndPoint $endPoint
+    }
 }
