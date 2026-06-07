@@ -8,20 +8,24 @@ schema: 2.0.0
 # Get-Pax8ContactById
 
 ## SYNOPSIS
+
 Returns a single contact from a company by Id.
 
 ## SYNTAX
 
 ```powershell
-Get-Pax8ContactById [-companyId] <String> [-contactId] <String> [<CommonParameters>]
+Get-Pax8ContactById [-companyId] <Guid> [-contactId] <Guid>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Returns a single contact from a company by Id.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Get-Pax8ContactById -companyId '6d1904c1-bae9-4664-afe1-f9d8858495ed' -contactId 'b2b6ac08-e02e-4138-b354-a0f5b233eeb2'
 ```
@@ -31,10 +35,11 @@ This command returns a contact.
 ## PARAMETERS
 
 ### -companyId
+
 The company Id.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -46,10 +51,11 @@ Accept wildcard characters: False
 ```
 
 ### -contactId
+
 The contact Id.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -61,6 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -70,9 +77,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Contacts](https://docs.pax8.com/api/v1#tag/Contacts)
+[Get Contact By ID](https://devx.pax8.com/reference/get_companies-companyid-contacts-contactid)

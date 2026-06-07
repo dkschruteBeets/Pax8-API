@@ -8,26 +8,32 @@ schema: 2.0.0
 # Get-Pax8Contact
 
 ## SYNOPSIS
+
 Returns a paginated list of contacts from a company, ordered by 'createDate' descending.
 
 ## SYNTAX
 
 ### Paging (Default)
+
 ```powershell
-Get-Pax8Contact -companyId <String> [-page <Int32>] [-size <Int32>] [<CommonParameters>]
+Get-Pax8Contact -companyId <Guid> [-page <Int32>] [-size <Int32>]
+ [<CommonParameters>]
 ```
 
 ### All
+
 ```powershell
-Get-Pax8Contact -companyId <String> [-all] [<CommonParameters>]
+Get-Pax8Contact -companyId <Guid> [-all] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Returns a paginated list of contacts from a company, ordered by 'createDate' descending.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Get-Pax8Contact -companyId '6d1904c1-bae9-4664-afe1-f9d8858495ed' -all
 ```
@@ -37,6 +43,7 @@ This command gets all contacts from a company.
 ## PARAMETERS
 
 ### -all
+
 Returns all contacts specific to the company.
 
 ```yaml
@@ -52,10 +59,11 @@ Accept wildcard characters: False
 ```
 
 ### -companyId
+
 The company Id.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -67,6 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -page
+
 The page number to request for in the contacts list.
 
 ```yaml
@@ -82,6 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -size
+
 Return this number of company records per page. Default is 10.
 
 ```yaml
@@ -97,6 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -106,9 +117,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Contacts](https://docs.pax8.com/api/v1#tag/Contacts)
+[List Contacts](https://devx.pax8.com/reference/get_companies-companyid-contacts)

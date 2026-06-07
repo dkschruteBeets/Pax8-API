@@ -8,21 +8,25 @@ schema: 2.0.0
 # New-Pax8Contact
 
 ## SYNOPSIS
+
 Creates a new contact for a company.
 
 ## SYNTAX
 
 ```powershell
-New-Pax8Contact [-companyId] <String> [-firstName] <String> [-lastName] <String> [-email] <String>
- [-phone] <String> [[-types] <Array>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-Pax8Contact [-companyId] <Guid> [-firstName] <String> [-lastName] <String> [-email] <MailAddress>
+ [-phone] <String> [[-types] <Array>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Creates a new contact for a company.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 $newParams = @{
     companyId = 'c0486b84-3bfd-4f14-964a-1b5699b824ce'
@@ -41,6 +45,7 @@ This command creates a new contact.
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -56,6 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -72,10 +78,11 @@ Accept wildcard characters: False
 ```
 
 ### -companyId
+
 The company Id.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -87,10 +94,11 @@ Accept wildcard characters: False
 ```
 
 ### -email
+
 The email.
 
 ```yaml
-Type: String
+Type: MailAddress
 Parameter Sets: (All)
 Aliases:
 
@@ -102,6 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -firstName
+
 The first name.
 
 ```yaml
@@ -117,6 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -lastName
+
 The last name.
 
 ```yaml
@@ -132,6 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -phone
+
 The phone number.
 
 ```yaml
@@ -147,6 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -types
+
 The contact type (array of objects).
 
 Valid values for `type`:
@@ -175,6 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -184,9 +197,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Contacts](https://docs.pax8.com/api/v1#tag/Contacts)
+[Create Contact](https://devx.pax8.com/reference/post_companies-companyid-contacts)

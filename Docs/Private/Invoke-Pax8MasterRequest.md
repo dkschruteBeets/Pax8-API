@@ -8,6 +8,7 @@ schema: 2.0.0
 # Invoke-Pax8MasterRequest
 
 ## SYNOPSIS
+
 Invokes requests called by all private functions.
 
 ## SYNTAX
@@ -17,6 +18,7 @@ Invoke-Pax8MasterRequest [[-Arguments] <Object>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 This function issues the final web request called by the following:
 
 - `Invoke-Pax8AllRequest`
@@ -31,6 +33,7 @@ All requests made via this function include error handling.
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Invoke-Pax8MasterRequest -Arguments $requestArgs
 ```
@@ -38,6 +41,7 @@ Invoke-Pax8MasterRequest -Arguments $requestArgs
 ## PARAMETERS
 
 ### -Arguments
+
 Accepts a hash table of parameters.
 
 ```yaml
@@ -53,6 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -62,7 +67,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS

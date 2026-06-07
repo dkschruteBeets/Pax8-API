@@ -8,20 +8,23 @@ schema: 2.0.0
 # Get-Pax8InvoiceById
 
 ## SYNOPSIS
+
 Returns an invoice by Id.
 
 ## SYNTAX
 
 ```powershell
-Get-Pax8InvoiceById [-invoiceId] <String> [<CommonParameters>]
+Get-Pax8InvoiceById [-invoiceId] <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Returns an invoice by Id.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Get-Pax8InvoiceById -invoiceId '11bcf019-df75-4dcd-97b4-130f48eea0ee'
 ```
@@ -31,10 +34,11 @@ This command gets an invoice by Id.
 ## PARAMETERS
 
 ### -invoiceId
+
 The invoice Id.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -46,6 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -55,9 +60,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Invoices](https://docs.pax8.com/api/v1#tag/Invoices)
+[Get Invoice By ID](https://devx.pax8.com/reference/getpartnerinvoice)

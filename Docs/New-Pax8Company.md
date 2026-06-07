@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-Pax8Company
 
 ## SYNOPSIS
+
 Creates a new company.
 
 ## SYNTAX
@@ -15,15 +16,18 @@ Creates a new company.
 ```powershell
 New-Pax8Company [-name] <String> [-address] <Object> [-phone] <String> [-website] <String>
  [[-externalId] <String>] [-billOnBehalfOfEnabled] <Boolean> [-selfServiceAllowed] <Boolean>
- [-orderApprovedRequired] <Boolean> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-orderApprovalRequired] <Boolean> [-contacts <Array>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The company will be placed in an inactive status until the company has primary contacts added.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 $newParams = @{
     name                  = 'Initech'
@@ -38,7 +42,20 @@ $newParams = @{
     website               = 'initech.lumbergh.co'
     billOnBehalfOfEnabled = $false
     selfServiceAllowed    = $false
-    orderApprovedRequired = $false
+    orderApprovalRequired = $false
+    contacts              = @(
+        @{
+            firstName = 'Peter'
+            lastName  = 'Gibbons'
+            email     = 'pgibbons@initech.lumbergh.co'
+            phone     = '999-999-9999'
+            types     = @(
+                @{ type = 'Admin'; primary = $true }
+                @{ type = 'Billing'; primary = $true }
+                @{ type = 'Technical'; primary = $true }
+            )
+        }
+    )
 }
 
 New-Pax8Company @newParams
@@ -49,6 +66,7 @@ This command creates a new company.
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -64,6 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -80,6 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -address
+
 The company address.
 
 ```yaml
@@ -95,6 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -billOnBehalfOfEnabled
+
 Value is true if Pax8 handles billing transactions.
 
 Value is false if partner handles billing transactions.
@@ -112,6 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -externalId
+
 An external Id that can be assigned to the company for reference.
 
 ```yaml
@@ -127,6 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -name
+
 The company name.
 
 ```yaml
@@ -141,7 +164,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -orderApprovedRequired
+### -orderApprovalRequired
+
 Value is true if the company's self-service orders require approval, otherwise value is false.
 
 ```yaml
@@ -157,6 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -phone
+
 The primary phone number of the company.
 
 ```yaml
@@ -172,6 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -selfServiceAllowed
+
 Value is true if self-service privileges are available to the company, otherwise value is false.
 
 ```yaml
@@ -187,6 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -website
+
 The full URL of the company website.
 
 ```yaml
@@ -201,7 +228,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -contacts
+
+Optional array of contact objects to create with the company.
+Each contact should follow the PAX8 Contact schema, including `firstName`, `lastName`, `email`, and `phone`.
+Use `types` entries such as `@{ type = 'Admin'; primary = $true }` to define primary contact roles.
+
+```yaml
+Type: Array
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -211,9 +257,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Companies](https://docs.pax8.com/api/v1#tag/Companies)
+[Create Company](https://devx.pax8.com/reference/createcompany)

@@ -8,22 +8,25 @@ schema: 2.0.0
 # Update-Pax8SubscriptionById
 
 ## SYNOPSIS
+
 Updates a specified subscription by Id.
 
 ## SYNTAX
 
 ```powershell
-Update-Pax8SubscriptionById [-subscriptionId] <String> [-quantity] <Int32> [-startDate] <String>
- [[-endDate] <String>] [[-price] <Double>] [-billingTerm] <String> [[-provisioningDetails] <Array>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Update-Pax8SubscriptionById [-subscriptionId] <String> [[-quantity] <Double>] [[-startDate] <String>]
+ [[-endDate] <String>] [[-price] <Double>] [[-billingTerm] <String>] [[-provisioningDetails] <Array>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Updates a specified subscription by Id.
+PAX8 requires at least one update field in the request body, such as `price`, `billingTerm`, `quantity`, or `startDate`.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 $updateParams = @{
     subscriptionId      = '0ddf82c6-90ba-4008-9f06-b71982dbc34e'
@@ -41,6 +44,7 @@ This command updates a subscription by Id.
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -56,6 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -72,15 +77,14 @@ Accept wildcard characters: False
 ```
 
 ### -billingTerm
+
 The subscription billing term.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: Monthly, Annual, 2-Year, 3-Year, 1-Time, Trial
-
-Required: True
+Required: False
 Position: 5
 Default value: None
 Accept pipeline input: False
@@ -88,6 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -endDate
+
 The subscription end date.
 
 Valid format: `yyyy-MM-dd`
@@ -105,6 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -price
+
 The subscription price.
 
 ```yaml
@@ -120,6 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -provisioningDetails
+
 Provisioning details to add to the subscription.
 
 ```yaml
@@ -135,14 +142,15 @@ Accept wildcard characters: False
 ```
 
 ### -quantity
+
 The subscription quantity.
 
 ```yaml
-Type: Int32
+Type: Double
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
@@ -150,6 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -startDate
+
 The subscription start date.
 
 Valid format: `yyyy-MM-dd`
@@ -159,7 +168,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
@@ -167,6 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -subscriptionId
+
 The subscription Id.
 
 ```yaml
@@ -182,6 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -191,9 +202,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Subscriptions](https://docs.pax8.com/api/v1#tag/Subscriptions)
+[Update Subscription](https://devx.pax8.com/reference/updatesubscription)

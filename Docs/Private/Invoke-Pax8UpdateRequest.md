@@ -8,6 +8,7 @@ schema: 2.0.0
 # Invoke-Pax8UpdateRequest
 
 ## SYNOPSIS
+
 Invokes an `Update` request.
 
 ## SYNTAX
@@ -18,6 +19,7 @@ Invoke-Pax8UpdateRequest [[-Arguments] <Object>] [[-EndPoint] <String>] [-WhatIf
 ```
 
 ## DESCRIPTION
+
 This function handles all `Update` requests related to `Update-Pax8` cmdlets.
 
 The `PUT` method is used for this REST function call.
@@ -25,6 +27,7 @@ The `PUT` method is used for this REST function call.
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Invoke-Pax8UpdateRequest -Arguments $requestArgs -EndPoint $endPoint
 ```
@@ -32,6 +35,7 @@ Invoke-Pax8UpdateRequest -Arguments $requestArgs -EndPoint $endPoint
 ## PARAMETERS
 
 ### -Arguments
+
 Accepts a hash table of parameters.
 
 ```yaml
@@ -47,6 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -62,6 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndPoint
+
 The API endpoint resource.
 
 ```yaml
@@ -77,6 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -93,6 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -102,7 +110,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS

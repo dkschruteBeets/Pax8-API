@@ -8,20 +8,24 @@ schema: 2.0.0
 # Get-Pax8ProductProvisioningDetail
 
 ## SYNOPSIS
+
 Returns provisioning details for a specific product.
 
 ## SYNTAX
 
 ```powershell
-Get-Pax8ProductProvisioningDetail [-productId] <String> [<CommonParameters>]
+Get-Pax8ProductProvisioningDetail [-productId] <String>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Returns provisioning details for a specific product.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Get-Pax8ProductProvisioningDetail -productId 'fd6ac512-9043-4cab-927d-fa17d6ae0588'
 ```
@@ -31,6 +35,7 @@ This command gets provisioning details for the specified product.
 ## PARAMETERS
 
 ### -productId
+
 The product Id.
 
 ```yaml
@@ -46,6 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -55,9 +61,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Products](https://docs.pax8.com/api/v1#tag/Products)
+[Get Provisioning Details](https://devx.pax8.com/reference/findprovisiondetailsbyproductid)

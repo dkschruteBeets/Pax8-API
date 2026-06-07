@@ -8,21 +8,25 @@ schema: 2.0.0
 # New-Pax8Order
 
 ## SYNOPSIS
+
 Creates a new order for a specified company.
 
 ## SYNTAX
 
 ```powershell
-New-Pax8Order [-companyId] <String> [[-orderedBy] <String>] [[-orderedByUserEmail] <String>]
- [-lineItems] <Array> [[-isMock] <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-Pax8Order [-companyId] <Guid> [[-orderedBy] <String>] [[-orderedByUserEmail] <MailAddress>]
+ [-lineItems] <Array> [[-isMock] <Boolean>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Creates a new order for a specified company.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 $newParams = @{
     companyId          = 'c0486b84-3bfd-4f14-964a-1b5699b824ce'
@@ -50,6 +54,7 @@ This command creates a new order.
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -65,6 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -81,10 +87,11 @@ Accept wildcard characters: False
 ```
 
 ### -companyId
+
 The company Id.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -96,6 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -isMock
+
 Perform validations only. Skip any interactions with the database.
 
 ```yaml
@@ -111,14 +119,18 @@ Accept wildcard characters: False
 ```
 
 ### -lineItems
-Line items required for the order (array of objects).
 
-Required parameters:
+Line items required for the order.
+Each item should follow the PAX8 CreateLineItem schema.
+
+Common required fields include:
 
 - `productId`
 - `lineItemNumber`
+- `quantity`
+- `billingTerm`
 
-Valid syntax: `@( @{ productId = 'd50111da-5c93-43b5-9a6f-a4c3f537476f'; lineItemNumber = 1 } )`
+Valid syntax: `@( @{ productId = 'd50111da-5c93-43b5-9a6f-a4c3f537476f'; lineItemNumber = 1; quantity = 1; billingTerm = 'Monthly' } )`
 
 ```yaml
 Type: Array
@@ -133,14 +145,13 @@ Accept wildcard characters: False
 ```
 
 ### -orderedBy
+
 The type of user who created the order.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: Pax8 Partner, Customer, Pax8
-
 Required: False
 Position: 1
 Default value: None
@@ -149,10 +160,11 @@ Accept wildcard characters: False
 ```
 
 ### -orderedByUserEmail
+
 The email address of the user who created this order.
 
 ```yaml
-Type: String
+Type: MailAddress
 Parameter Sets: (All)
 Aliases:
 
@@ -164,6 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -173,9 +186,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Orders](https://docs.pax8.com/api/v1#tag/Orders)
+[Create Order](https://devx.pax8.com/reference/createorder)

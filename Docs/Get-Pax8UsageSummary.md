@@ -8,28 +8,33 @@ schema: 2.0.0
 # Get-Pax8UsageSummary
 
 ## SYNOPSIS
+
 Returns a paginated list of usage summaries.
 
 ## SYNTAX
 
 ### Paging (Default)
+
 ```powershell
-Get-Pax8UsageSummary -subscriptionId <String> [-page <Int32>] [-size <Int32>] [-sort <String>]
- [-resourceGroup <String>] [-companyId <String>] [<CommonParameters>]
+Get-Pax8UsageSummary -subscriptionId <Guid> [-page <Int32>] [-size <Int32>] [-sort <String>]
+ [-resourceGroup <String>] [-companyId <Guid>] [<CommonParameters>]
 ```
 
 ### All
+
 ```powershell
-Get-Pax8UsageSummary -subscriptionId <String> [-sort <String>] [-resourceGroup <String>] [-companyId <String>]
+Get-Pax8UsageSummary -subscriptionId <Guid> [-sort <String>] [-resourceGroup <String>] [-companyId <Guid>]
  [-all] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Returns a paginated list of usage summaries.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Get-Pax8UsageSummary -subscriptionId '771f6174-20ee-48ca-8f40-cc30bb165bcd' -all
 ```
@@ -37,6 +42,7 @@ Get-Pax8UsageSummary -subscriptionId '771f6174-20ee-48ca-8f40-cc30bb165bcd' -all
 This command gets a usage summary list for the specified subscription.
 
 ### Example 2
+
 ```powershell
 Get-Pax8UsageSummary -subscriptionId '771f6174-20ee-48ca-8f40-cc30bb165bcd' -page 1 -size 2 -sort currentCharges -direction desc
 ```
@@ -48,6 +54,7 @@ The `-direction` parameter is a dynamic parameter and is only available when usi
 ## PARAMETERS
 
 ### -all
+
 Returns all usage summaries.
 
 ```yaml
@@ -63,10 +70,11 @@ Accept wildcard characters: False
 ```
 
 ### -companyId
+
 The company Id.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -78,6 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -page
+
 The page number to request in the usage summaries list.
 
 ```yaml
@@ -93,6 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -resourceGroup
+
 Returns only usage summaries matching this `resourceGroup` value.
 
 ```yaml
@@ -108,6 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -size
+
 Returns this number of usage summaries per page. Default is 10.
 
 ```yaml
@@ -123,6 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -sort
+
 Returns usage summaries sorted by this field.
 
 This parameter also creates a dynamic parameter `-direction` when used.
@@ -140,8 +152,6 @@ Specifying the dynamic parameter is optional.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: resourceGroup, currentCharges, partnerTotal
-
 Required: False
 Position: Named
 Default value: None
@@ -150,10 +160,11 @@ Accept wildcard characters: False
 ```
 
 ### -subscriptionId
+
 The subscription Id.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -165,6 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -174,9 +186,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Usage Summaries](https://docs.pax8.com/api/v1#tag/Usage-Summaries)
+[List Usage Summaries](https://devx.pax8.com/reference/findsubscriptionusagesummaries)

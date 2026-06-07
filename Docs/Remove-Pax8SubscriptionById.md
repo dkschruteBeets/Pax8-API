@@ -8,21 +8,23 @@ schema: 2.0.0
 # Remove-Pax8SubscriptionById
 
 ## SYNOPSIS
+
 Cancels a subscription by Id.
 
 ## SYNTAX
 
 ```powershell
-Remove-Pax8SubscriptionById [-subscriptionId] <String> [[-cancelDate] <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-Pax8SubscriptionById [-subscriptionId] <String> [[-cancelDate] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Cancels a subscription by Id.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Remove-Pax8SubscriptionById -subscriptionId '5e0931ff-78ef-4e24-8db4-47c84da07ad3' -cancelDate '2022-06-25'
 ```
@@ -32,6 +34,7 @@ This command cancels a subscription on the specified date.
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -47,6 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -63,6 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -cancelDate
+
 The date to cancel the subscription on.
 
 Valid format: `yyyy-MM-dd`
@@ -80,6 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -subscriptionId
+
 The subscription Id.
 
 ```yaml
@@ -95,6 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -104,9 +111,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Subscriptions](https://docs.pax8.com/api/v1#tag/Subscriptions)
+[Cancel Subscription](https://devx.pax8.com/reference/delete_subscriptions-subscriptionid)

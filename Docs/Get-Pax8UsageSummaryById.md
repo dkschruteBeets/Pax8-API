@@ -8,20 +8,23 @@ schema: 2.0.0
 # Get-Pax8UsageSummaryById
 
 ## SYNOPSIS
+
 Returns a usage summary by Id.
 
 ## SYNTAX
 
 ```powershell
-Get-Pax8UsageSummaryById [-usageSummaryId] <String> [<CommonParameters>]
+Get-Pax8UsageSummaryById [-usageSummaryId] <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Returns a usage summary by Id.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Get-Pax8UsageSummaryById -usageSummaryId 'b2a734a1-4459-428f-a75e-bd95f587909e'
 ```
@@ -31,10 +34,11 @@ This command gets a usage summary by Id.
 ## PARAMETERS
 
 ### -usageSummaryId
+
 The usage summary Id.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -46,6 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -55,9 +60,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Usage Summaries](https://docs.pax8.com/api/v1#tag/Usage-Summaries)
+[Get Usage Summary By ID](https://devx.pax8.com/reference/findsubscriptionusagesummary)

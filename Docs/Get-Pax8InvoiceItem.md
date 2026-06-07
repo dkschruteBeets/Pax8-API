@@ -8,26 +8,32 @@ schema: 2.0.0
 # Get-Pax8InvoiceItem
 
 ## SYNOPSIS
+
 Returns a paginated list of items for an invoice.
 
 ## SYNTAX
 
 ### Paging (Default)
+
 ```powershell
-Get-Pax8InvoiceItem -invoiceId <String> [-page <Int32>] [-size <Int32>] [<CommonParameters>]
+Get-Pax8InvoiceItem -invoiceId <Guid> [-page <Int32>] [-size <Int32>]
+ [<CommonParameters>]
 ```
 
 ### All
+
 ```powershell
-Get-Pax8InvoiceItem -invoiceId <String> [-all] [<CommonParameters>]
+Get-Pax8InvoiceItem -invoiceId <Guid> [-all] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Returns a paginated list of items for an invoice.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Get-Pax8InvoiceItem -invoiceId '11bcf019-df75-4dcd-97b4-130f48eea0ee' -all
 ```
@@ -37,6 +43,7 @@ This command gets all invoice items specific to the invoice Id.
 ## PARAMETERS
 
 ### -all
+
 Returns all invoice items specific to the invoice Id.
 
 ```yaml
@@ -52,10 +59,11 @@ Accept wildcard characters: False
 ```
 
 ### -invoiceId
+
 The invoice Id.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -67,6 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -page
+
 The page number to request in the invoices items list.
 
 ```yaml
@@ -82,6 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -size
+
 Returns this number of invoice items per page. Default is 10.
 
 ```yaml
@@ -97,6 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -106,9 +117,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Invoices](https://docs.pax8.com/api/v1#tag/Invoices)
+[List Invoice Items](https://devx.pax8.com/reference/findpartnerinvoiceitems)

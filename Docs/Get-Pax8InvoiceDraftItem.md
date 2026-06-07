@@ -1,50 +1,50 @@
 ---
 external help file: Pax8-API-help.xml
 Module Name: Pax8-API
-online version:
+online version: https://devx.pax8.com/reference/findpartnerdraftinvoiceitems
 schema: 2.0.0
 ---
 
-# Get-Pax8Order
+# Get-Pax8InvoiceDraftItem
 
 ## SYNOPSIS
 
-Returns a paginated list of orders associated with your partner.
+Returns a paginated list of draft invoice items.
 
 ## SYNTAX
 
 ### Paging (Default)
 
 ```powershell
-Get-Pax8Order [-page <Int32>] [-size <Int32>] [-companyId <Guid>]
- [<CommonParameters>]
+Get-Pax8InvoiceDraftItem [-page <Int32>] [-size <Int32>] [-monthOffset <Int32>] [-companyId <Guid>] [<CommonParameters>]
 ```
 
 ### All
 
 ```powershell
-Get-Pax8Order [-companyId <Guid>] [-all] [<CommonParameters>]
+Get-Pax8InvoiceDraftItem [-monthOffset <Int32>] [-companyId <Guid>] [-all]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Returns a paginated list of orders associated with your partner.
+Returns a paginated list of draft invoice items before they are finalized into invoices.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-Get-Pax8Order -companyId '6d1904c1-bae9-4664-afe1-f9d8858495ed' -all
+Get-Pax8InvoiceDraftItem -monthOffset 1 -all
 ```
 
-This command gets all orders specific to the company Id.
+This command gets all draft invoice items for the next month.
 
 ## PARAMETERS
 
 ### -all
 
-Returns all orders specific to the company Id.
+Returns all draft invoice items.
 
 ```yaml
 Type: SwitchParameter
@@ -53,14 +53,14 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -companyId
 
-The company Id.
+Filters draft invoice items to a specific company.
 
 ```yaml
 Type: Guid
@@ -74,9 +74,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -monthOffset
+
+Number of months from current to return draft items for.
+0 returns the current month and 1 returns the next month.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 1
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -page
 
-The page number to request for in the orders list.
+The page number to request in the draft invoice items list.
 
 ```yaml
 Type: Int32
@@ -92,7 +109,8 @@ Accept wildcard characters: False
 
 ### -size
 
-Returns this number of orders per page. Default is 10.
+Returns this number of draft invoice items per page.
+Default is 10.
 
 ```yaml
 Type: Int32
@@ -124,4 +142,4 @@ Author: Terry Wilson
 
 ## RELATED LINKS
 
-[List Orders](https://devx.pax8.com/reference/findorders)
+[List Draft Invoice Items](https://devx.pax8.com/reference/findpartnerdraftinvoiceitems)

@@ -1,27 +1,28 @@
 ---
 external help file: Pax8-API-help.xml
 Module Name: Pax8-API
-online version:
+online version: https://devx.pax8.com/reference/updatecompany
 schema: 2.0.0
 ---
 
-# Update-Pax8ContactById
+# Update-Pax8CompanyById
 
 ## SYNOPSIS
 
-Updates contact information by Id.
+Updates company information by Id.
 
 ## SYNTAX
 
 ```powershell
-Update-Pax8ContactById [-companyId] <Guid> [-contactId] <Guid> [-firstName] <String> [-lastName] <String>
- [-email] <MailAddress> [-phone] <String> [[-types] <Array>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Update-Pax8CompanyById [-companyId] <Guid> [[-name] <String>] [[-address] <Object>] [[-phone] <String>]
+ [[-website] <String>] [[-externalId] <String>] [[-billOnBehalfOfEnabled] <Boolean>]
+ [[-selfServiceAllowed] <Boolean>] [[-orderApprovalRequired] <Boolean>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Updates contact information by Id.
+Updates company information by Id.
 
 ## EXAMPLES
 
@@ -29,20 +30,19 @@ Updates contact information by Id.
 
 ```powershell
 $updateParams = @{
-    companyId = 'c0486b84-3bfd-4f14-964a-1b5699b824ce'
-    contactId = '89ce3f86-4db7-47e8-9f72-0725fb861508'
-    firstName = 'Michael'
-    lastName  = 'Bolton'
-    email     = 'mbolton@initech.lumbergh.co'
-    phone     = '111-187-1111'
-    types     = @( @{ type = 'Technical'; primary = $false } )
-
+    companyId             = 'c0486b84-3bfd-4f14-964a-1b5699b824ce'
+    name                  = 'Initech'
+    phone                 = '999-999-9999'
+    website               = 'initech.lumbergh.co'
+    billOnBehalfOfEnabled = $false
+    selfServiceAllowed    = $false
+    orderApprovalRequired = $false
 }
 
-Update-Pax8ContactById
+Update-Pax8CompanyById @updateParams
 ```
 
-This command updates an existing contact.
+This command updates an existing company.
 
 ## PARAMETERS
 
@@ -57,7 +57,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -74,6 +74,40 @@ Aliases: wi
 
 Required: False
 Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -address
+
+The company address.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -billOnBehalfOfEnabled
+
+Value is true if Pax8 handles billing transactions.
+
+Value is false if partner handles billing transactions.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 6
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -95,65 +129,49 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -contactId
+### -externalId
 
-The contact Id.
+An external Id that can be assigned to the company for reference.
 
 ```yaml
-Type: Guid
+Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -name
+
+The company name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -email
+### -orderApprovalRequired
 
-The email.
+Value is true if the company's self-service orders require approval, otherwise value is false.
 
 ```yaml
-Type: MailAddress
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: 4
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -firstName
-
-The first name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -lastName
-
-The last name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 3
+Required: False
+Position: 8
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -161,44 +179,47 @@ Accept wildcard characters: False
 
 ### -phone
 
-The phone number.
+The primary phone number of the company.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: 5
+Required: False
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -types
+### -selfServiceAllowed
 
-The contact type (array of objects).
-
-Valid values for `type`:
-
-- `Admin`
-- `Billing`
-- `Technical`
-
-Valid values for `primary`:
-
-- `$true`
-- `$false`
-
-Valid syntax: `@( @{ type = 'Admin'; primary = $true } )`
+Value is true if self-service privileges are available to the company, otherwise value is false.
 
 ```yaml
-Type: Array
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 6
+Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -website
+
+The full URL of the company website.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -222,4 +243,4 @@ Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Update Contact](https://devx.pax8.com/reference/put_companies-companyid-contacts-contactid)
+[Update Company](https://devx.pax8.com/reference/updatecompany)

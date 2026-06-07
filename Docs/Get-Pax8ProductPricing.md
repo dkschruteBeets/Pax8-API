@@ -8,20 +8,24 @@ schema: 2.0.0
 # Get-Pax8ProductPricing
 
 ## SYNOPSIS
+
 Returns pricing information for a particular product.
 
 ## SYNTAX
 
 ```powershell
-Get-Pax8ProductPricing [-productId] <String> [[-companyId] <String>] [<CommonParameters>]
+Get-Pax8ProductPricing [-productId] <String> [[-companyId] <Guid>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Returns pricing information for a particular product.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Get-Pax8ProductPricing -productId 'fd6ac512-9043-4cab-927d-fa17d6ae0588'
 ```
@@ -31,10 +35,11 @@ This command gets recommended pricing and partner costs for the specified produc
 ## PARAMETERS
 
 ### -companyId
+
 The company Id used to see company-specific pricing.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -46,6 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -productId
+
 The product Id.
 
 ```yaml
@@ -61,6 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -70,9 +77,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Products](https://docs.pax8.com/api/v1#tag/Products)
+[Get Pricing](https://devx.pax8.com/reference/findpricingbyproductid)

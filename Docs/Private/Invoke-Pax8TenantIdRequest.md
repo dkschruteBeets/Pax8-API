@@ -8,6 +8,7 @@ schema: 2.0.0
 # Invoke-Pax8TenantIdRequest
 
 ## SYNOPSIS
+
 Invokes a `Get` request to retrieve a Microsoft 365 tenant Id.
 
 ## SYNTAX
@@ -17,6 +18,7 @@ Invoke-Pax8TenantIdRequest [[-Arguments] <Object>] [[-EndPoint] <String>] [<Comm
 ```
 
 ## DESCRIPTION
+
 This function uses an alternate API endpoint to retrive a tenant Id: `'https://app.pax8.com/p8p/api/v3'`
 
 It is unclear how long this URI will be available since it's not in the official documentation.
@@ -26,6 +28,7 @@ The `Get` method is used for this REST function call.
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Invoke-Pax8TenantIdRequest -Arguments $requestArgs -EndPoint $endPoint
 ```
@@ -33,6 +36,7 @@ Invoke-Pax8TenantIdRequest -Arguments $requestArgs -EndPoint $endPoint
 ## PARAMETERS
 
 ### -Arguments
+
 Accepts a hash table of parameters.
 
 ```yaml
@@ -48,6 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndPoint
+
 The API endpoint resource.
 
 ```yaml
@@ -63,6 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -72,7 +78,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS

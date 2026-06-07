@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-Pax8ProductDependency
 
 ## SYNOPSIS
+
 Returns associated dependencies for the specified product.
 
 ## SYNTAX
@@ -17,11 +18,13 @@ Get-Pax8ProductDependency [-productId] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Returns associated dependencies for the specified product.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Get-Pax8ProductDependency -productId 'fd6ac512-9043-4cab-927d-fa17d6ae0588'
 ```
@@ -31,6 +34,7 @@ This command gets associated dependencies for the specified product.
 ## PARAMETERS
 
 ### -productId
+
 The product Id.
 
 ```yaml
@@ -46,6 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -55,9 +60,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Products](https://docs.pax8.com/api/v1#tag/Products)
+[Get Product Dependencies](https://devx.pax8.com/reference/findproductdependenciesbyproductid)

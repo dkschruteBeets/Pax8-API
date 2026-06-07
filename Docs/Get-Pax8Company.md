@@ -8,11 +8,13 @@ schema: 2.0.0
 # Get-Pax8Company
 
 ## SYNOPSIS
+
 Returns a paginated list of companies.
 
 ## SYNTAX
 
 ### Paging (Default)
+
 ```powershell
 Get-Pax8Company [-page <Int32>] [-size <Int32>] [-sort <String>] [-city <String>] [-country <String>]
  [-stateOrProvince <String>] [-postalCode <String>] [-selfServiceAllowed <Boolean>]
@@ -20,18 +22,22 @@ Get-Pax8Company [-page <Int32>] [-size <Int32>] [-sort <String>] [-city <String>
 ```
 
 ### All
+
 ```powershell
 Get-Pax8Company [-sort <String>] [-city <String>] [-country <String>] [-stateOrProvince <String>]
  [-postalCode <String>] [-selfServiceAllowed <Boolean>] [-billOnBehalfOfEnabled <Boolean>]
- [-orderApprovalRequired <Boolean>] [-status <String>] [-all] [<CommonParameters>]
+ [-orderApprovalRequired <Boolean>] [-status <String>] [-all]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Returns a paginated list of companies.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Get-Pax8Company -page 1 -size 5 -sort city -status Active
 ```
@@ -39,6 +45,7 @@ Get-Pax8Company -page 1 -size 5 -sort city -status Active
 This command gets 5 active companies on page 1 and sorts by city.
 
 ### Example 2
+
 ```powershell
 Get-Pax8Company -all -sort name -direction desc
 ```
@@ -50,6 +57,7 @@ The `-direction` parameter is a dynamic parameter and is only available when usi
 ## PARAMETERS
 
 ### -all
+
 Returns all companies.
 
 ```yaml
@@ -65,6 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -billOnBehalfOfEnabled
+
 Returns only companies matching this `billOnBehalfOfEnabled` value.
 
 ```yaml
@@ -80,6 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -city
+
 Returns only companies matching this `city` value.
 
 ```yaml
@@ -95,6 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -country
+
 Returns only companies matching this `country` value.
 
 ```yaml
@@ -110,6 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -orderApprovalRequired
+
 Returns only companies matching this `orderApprovalRequired` value.
 
 ```yaml
@@ -125,6 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -page
+
 The page number to request for in the companies list.
 
 ```yaml
@@ -140,6 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -postalCode
+
 Returns only companies matching this `postalCode` value.
 
 ```yaml
@@ -155,6 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -selfServiceAllowed
+
 Returns only companies matching this `selfServiceAllowed` value.
 
 ```yaml
@@ -170,6 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -size
+
 Returns this number of company records per page. Default is 10.
 
 ```yaml
@@ -185,6 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -sort
+
 Returns companies sorted by this field.
 
 This parameter also creates a dynamic parameter `-direction` when used.
@@ -202,8 +219,6 @@ Specifying the dynamic parameter is optional.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: name, city, country, stateOrProvince, postalCode
-
 Required: False
 Position: Named
 Default value: None
@@ -212,6 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -stateOrProvince
+
 Returns only companies matching this `stateOrProvince` value.
 
 ```yaml
@@ -227,14 +243,13 @@ Accept wildcard characters: False
 ```
 
 ### -status
+
 Returns only companies matching this `status` value.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: Active, Inactive, Deleted
-
 Required: False
 Position: Named
 Default value: None
@@ -243,6 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -252,9 +268,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Companies](https://docs.pax8.com/api/v1#tag/Companies)
+[List Companies](https://devx.pax8.com/reference/findcompanies)

@@ -8,28 +8,34 @@ schema: 2.0.0
 # Get-Pax8Subscription
 
 ## SYNOPSIS
+
 Returns a paginated list of subscriptions.
 
 ## SYNTAX
 
 ### Paging (Default)
+
 ```powershell
 Get-Pax8Subscription [-page <Int32>] [-size <Int32>] [-sort <String>] [-status <String>]
- [-billingTerm <String>] [-companyId <String>] [-productId <String>] [<CommonParameters>]
+ [-billingTerm <String>] [-companyId <Guid>] [-productId <Guid>]
+ [<CommonParameters>]
 ```
 
 ### All
+
 ```powershell
-Get-Pax8Subscription [-sort <String>] [-status <String>] [-billingTerm <String>] [-companyId <String>]
- [-productId <String>] [-all] [<CommonParameters>]
+Get-Pax8Subscription [-sort <String>] [-status <String>] [-billingTerm <String>] [-companyId <Guid>]
+ [-productId <Guid>] [-all] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Returns a paginated list of subscriptions.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Get-Pax8Subscription -page 10 -size 5 -sort startDate -billingTerm Monthly
 ```
@@ -37,6 +43,7 @@ Get-Pax8Subscription -page 10 -size 5 -sort startDate -billingTerm Monthly
 This commands gets 5 monthly subscriptions on page 10 and sorts by startDate.
 
 ### Example 2
+
 ```powershell
 Get-Pax8Subscription -all -sort createdDate -direction desc
 ```
@@ -48,6 +55,7 @@ The `-direction` parameter is a dynamic parameter and is only available when usi
 ## PARAMETERS
 
 ### -all
+
 Returns all subscriptions.
 
 ```yaml
@@ -63,14 +71,13 @@ Accept wildcard characters: False
 ```
 
 ### -billingTerm
+
 Returns only subscriptions matching this `billingTerm` value.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: Monthly, Annual, 2-Year, 3-Year, One-Time, Trial, Activation
-
 Required: False
 Position: Named
 Default value: None
@@ -79,10 +86,11 @@ Accept wildcard characters: False
 ```
 
 ### -companyId
+
 The company Id.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -94,6 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -page
+
 The page number to request in the subscriptions list.
 
 ```yaml
@@ -109,10 +118,11 @@ Accept wildcard characters: False
 ```
 
 ### -productId
+
 The product Id.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -124,6 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -size
+
 Returns this number of subsciptions per page. Default is 10.
 
 ```yaml
@@ -139,6 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -sort
+
 Returns subscriptions sorted by this field.
 
 This parameter also creates a dynamic parameter `-direction` when used.
@@ -156,8 +168,6 @@ Specifying the dynamic parameter is optional.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: quantity, startDate, endDate, createdDate, billingStart, price
-
 Required: False
 Position: Named
 Default value: None
@@ -166,14 +176,13 @@ Accept wildcard characters: False
 ```
 
 ### -status
+
 Returns only subscriptions matching this `status` value.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: Active, Cancelled, PendingManual, PendingAutomated, PendingCancel, WaitingForDetails, Trial, Converted, PendingActivation, Activated
-
 Required: False
 Position: Named
 Default value: None
@@ -182,6 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -191,9 +201,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
 Author: Terry Wilson
 
 ## RELATED LINKS
 
-[Subscriptions](https://docs.pax8.com/api/v1#tag/Subscriptions)
+[List Subscriptions](https://devx.pax8.com/reference/findsubscriptions)

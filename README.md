@@ -1,49 +1,52 @@
-<div id="top"></div>
-
-<!-- PROJECT LOGO -->
-<br />
+<!-- markdownlint-disable MD033 MD041 -->
 <div align="center">
   <a href="https://github.com/dkschruteBeets/Pax8-API">
-    <img src="Images/PAX8_Logo.png" alt="Logo" style="max-width: 100%; height: auto; width: auto; max-height: 400px;">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="Images/pax8-logo-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="Images/pax8-logo-light.svg">
+      <img src="Images/pax8-logo-light.svg" alt="Pax8 Logo" width="300">
+    </picture>
   </a>
 
-<h2 align="center">Pax8 REST API</h2>
+<h1 align="center">Pax8 API PowerShell Module</h1>
 
   <p align="center">
-    A PowerShell Module for the <a href="https://docs.pax8.com/api/v1"><strong>Pax8 REST API</strong></a>
+    A PowerShell module for Pax8 partner and authentication endpoints.
     <br />
-    <a href="https://github.com/dkschruteBeets/Pax8-API/blob/master/Pax8-API.md"><strong>Explore the docs »</strong></a>
-    <br />
+    <a href="https://github.com/dkschruteBeets/Pax8-API/blob/master/Pax8-API.md"><strong>Explore the docs</strong></a>
   </p>
-</div>
 
-<!-- PROJECT SHIELDS -->
-<div align="center">
+  <p align="center">
 
 [![Forks][forks-shield]][forks-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url] [![PS Gallery][ps-shield]][ps-url]
 
-</div>
+  </p>
 
-
-<!-- REPORT & REQUEST -->
-<p align="center">
-<a href="https://github.com/dkschruteBeets/Pax8-API/issues">Report Bug</a>
-    ·
+  <p align="center">
+    <a href="https://github.com/dkschruteBeets/Pax8-API/issues">Report Bug</a>
+    |
     <a href="https://github.com/dkschruteBeets/Pax8-API/issues">Request Feature</a>
-</p>
+  </p>
+</div>
+<!-- markdownlint-enable MD033 MD041 -->
 
-<!-- ABOUT THE PROJECT -->
 ## About
 
-This project exists to streamline Pax8 interactions and provide a way to automate tasks within the platform.
+This module provides PowerShell commands for working with Pax8 partner API resources, including:
 
+- 🏢 Companies
+- 👤 Contacts
+- 🧾 Invoices
+- 🛒 Orders
+- 📦 Products
+- 🔁 Subscriptions
+- 📊 Usage summaries
 
-<!-- GETTING STARTED -->
+The module uses the Pax8 OAuth client credentials flow for authentication. For current API reference material, see the [Pax8 developer documentation](https://devx.pax8.com/reference).
+
 ## Getting Started
 
-The Pax8 REST API requires a `Developer Application` to authenticate and make requests. This provides a `client_id` and `client_secret` which is used in this module to connect to the API.
-
-_For more information, please refer to the [Pax8 documentation](https://docs.pax8.com/api/v1#section/Create-a-Developer-Application)_.
+The Pax8 API requires a developer application with a `client_id` and `client_secret`.
 
 ### Installation
 
@@ -51,20 +54,25 @@ _For more information, please refer to the [Pax8 documentation](https://docs.pax
 Install-Module -Name 'Pax8-API'
 ```
 
-
-<!-- USAGE EXAMPLES -->
 ## Usage
 
-Run the initial connect command:
+Create a credential where the username is your Pax8 `client_id` and the password is your Pax8 `client_secret`, then connect:
 
 ```powershell
-Connect-Pax8 -credential <client_id>
+$credential = Get-Credential
+Connect-Pax8 -credential $credential
 ```
 
-_For a complete list of commands, please refer to the [documentation](https://github.com/dkschruteBeets/Pax8-API/blob/master/Pax8-API.md)_.
+Example read operations:
 
+```powershell
+Get-Pax8Company -page 0 -size 10
+Get-Pax8Product -search 'Microsoft' -page 0 -size 10
+Get-Pax8Invoice -page 0 -size 10
+```
 
-<!-- CONTRIBUTING -->
+For a complete command list, see [Pax8-API.md](https://github.com/dkschruteBeets/Pax8-API/blob/master/Pax8-API.md).
+
 ## Contributing
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request.
@@ -75,21 +83,10 @@ If you have a suggestion that would make this better, please fork the repo and c
 4. Push to the Branch (`git push origin feature/CoolFeature`)
 5. Open a Pull Request
 
-<!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* [Animals as Leaders](https://www.youtube.com/watch?v=N0RbJRY_pU8) - Many hours were spent listening to these guys while working on this project. 🎶
-* [christaylorcodes](https://github.com/christaylorcodes) - I drew a ton of inspiration from his ConnectWise module. Good stuff. 🤘
-* ... and of course, [Dwight Kurt Schrute III](https://theoffice.fandom.com/wiki/Dwight_Schrute) 🐻
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [forks-shield]: https://img.shields.io/github/forks/dkschruteBeets/Pax8-API?color=%2344d62c&logo=GitHub
 [forks-url]: https://github.com/dkschruteBeets/Pax8-API/network/members
 [issues-shield]: https://img.shields.io/github/issues/dkschruteBeets/Pax8-API?color=%2344d62c&logo=GitHub
