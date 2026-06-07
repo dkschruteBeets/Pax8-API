@@ -12,7 +12,7 @@
     RootModule           = 'Pax8-API.psm1'
 
     # Version number of this module.
-    ModuleVersion        = '0.2.0'
+    ModuleVersion        = '0.2.1'
 
     # Supported PSEditions
     CompatiblePSEditions = 'Desktop', 'Core'
@@ -140,7 +140,7 @@
             # IconUri = ''
 
             # ReleaseNotes of this module
-            ReleaseNotes = 'Aligns partner endpoints with current Pax8 API behavior, adds company update and draft invoice item commands, refreshes generated help, and updates README branding.'
+            ReleaseNotes = 'Corrects generated help for subscription date-time formats, sort field values, and invoice status casing.'
 
             # Prerelease string of this module
             # Prerelease = ''

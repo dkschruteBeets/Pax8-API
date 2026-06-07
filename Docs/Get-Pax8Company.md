@@ -210,10 +210,14 @@ This allows you to sort the results by an ascending or descending direction.
 
 Valid values:
 
-- `asc`
-- `desc`
+- `name`
+- `city`
+- `country`
+- `stateOrProvince`
+- `postalCode`
 
-Specifying the dynamic parameter is optional.
+Use the dynamic `-direction` parameter to specify `asc` or `desc`.
+Specifying `-direction` is optional.
 
 ```yaml
 Type: String

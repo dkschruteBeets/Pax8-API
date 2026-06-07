@@ -40,7 +40,7 @@ Returns a paginated list of invoices.
 ### Example 1
 
 ```powershell
-Get-Pax8Invoice -page 3 -size 1 -sort dueDate -status UnPaid
+Get-Pax8Invoice -page 3 -size 1 -sort dueDate -status Unpaid
 ```
 
 This command gets 1 unpaid invoice on page 3 and sorts by dueDate.
@@ -235,10 +235,16 @@ This allows you to sort the results by an ascending or descending direction.
 
 Valid values:
 
-- `asc`
-- `desc`
+- `invoiceDate`
+- `dueDate`
+- `status`
+- `partnerName`
+- `total`
+- `balance`
+- `carriedBalance`
 
-Specifying the dynamic parameter is optional.
+Use the dynamic `-direction` parameter to specify `asc` or `desc`.
+Specifying `-direction` is optional.
 
 ```yaml
 Type: String

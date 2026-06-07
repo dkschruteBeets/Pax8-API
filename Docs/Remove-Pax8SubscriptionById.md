@@ -26,7 +26,7 @@ Cancels a subscription by Id.
 ### Example 1
 
 ```powershell
-Remove-Pax8SubscriptionById -subscriptionId '5e0931ff-78ef-4e24-8db4-47c84da07ad3' -cancelDate '2022-06-25'
+Remove-Pax8SubscriptionById -subscriptionId '5e0931ff-78ef-4e24-8db4-47c84da07ad3' -cancelDate '2000-10-31T01:30:00.000-05:00'
 ```
 
 This command cancels a subscription on the specified date.
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 
 The date to cancel the subscription on.
 
-Valid format: `yyyy-MM-dd`
+Valid format: ISO 8601/RFC3339 date-time, for example `2000-10-31T01:30:00.000-05:00`.
 
 ```yaml
 Type: String

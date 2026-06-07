@@ -31,7 +31,7 @@ PAX8 requires at least one update field in the request body, such as `price`, `b
 $updateParams = @{
     subscriptionId      = '0ddf82c6-90ba-4008-9f06-b71982dbc34e'
     quantity            = 2
-    startDate           = '2022-07-01'
+    startDate           = '2000-10-31T01:30:00.000-05:00'
     billingTerm         = '2-Year'
     provisioningDetails = @( @{ key = 'userEmailAddress'; values = @('pgibbons@initech.lumbergh.co') } )
 }
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 The subscription end date.
 
-Valid format: `yyyy-MM-dd`
+Valid format: ISO 8601/RFC3339 date-time, for example `2001-10-31T01:30:00.000-05:00`.
 
 ```yaml
 Type: String
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 
 The subscription start date.
 
-Valid format: `yyyy-MM-dd`
+Valid format: ISO 8601/RFC3339 date-time, for example `2000-10-31T01:30:00.000-05:00`.
 
 ```yaml
 Type: String

@@ -257,10 +257,13 @@ Connect-Pax8 -credential $cred</dev:code>
             <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
             <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
             <maml:para>Valid values:</maml:para>
-            <maml:para>- `asc`</maml:para>
-            <maml:para>- `desc`</maml:para>
+            <maml:para>- `name`</maml:para>
+            <maml:para>- `city`</maml:para>
+            <maml:para>- `country`</maml:para>
+            <maml:para>- `stateOrProvince`</maml:para>
+            <maml:para>- `postalCode`</maml:para>
             <maml:para></maml:para>
-            <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+            <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -399,10 +402,13 @@ Connect-Pax8 -credential $cred</dev:code>
             <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
             <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
             <maml:para>Valid values:</maml:para>
-            <maml:para>- `asc`</maml:para>
-            <maml:para>- `desc`</maml:para>
+            <maml:para>- `name`</maml:para>
+            <maml:para>- `city`</maml:para>
+            <maml:para>- `country`</maml:para>
+            <maml:para>- `stateOrProvince`</maml:para>
+            <maml:para>- `postalCode`</maml:para>
             <maml:para></maml:para>
-            <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+            <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -553,10 +559,13 @@ Connect-Pax8 -credential $cred</dev:code>
           <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
           <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
           <maml:para>Valid values:</maml:para>
-          <maml:para>- `asc`</maml:para>
-          <maml:para>- `desc`</maml:para>
+          <maml:para>- `name`</maml:para>
+          <maml:para>- `city`</maml:para>
+          <maml:para>- `country`</maml:para>
+          <maml:para>- `stateOrProvince`</maml:para>
+          <maml:para>- `postalCode`</maml:para>
           <maml:para></maml:para>
-          <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+          <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
         </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -1201,10 +1210,15 @@ Connect-Pax8 -credential $cred</dev:code>
             <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
             <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
             <maml:para>Valid values:</maml:para>
-            <maml:para>- `asc`</maml:para>
-            <maml:para>- `desc`</maml:para>
+            <maml:para>- `invoiceDate`</maml:para>
+            <maml:para>- `dueDate`</maml:para>
+            <maml:para>- `status`</maml:para>
+            <maml:para>- `partnerName`</maml:para>
+            <maml:para>- `total`</maml:para>
+            <maml:para>- `balance`</maml:para>
+            <maml:para>- `carriedBalance`</maml:para>
             <maml:para></maml:para>
-            <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+            <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -1359,10 +1373,15 @@ Connect-Pax8 -credential $cred</dev:code>
             <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
             <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
             <maml:para>Valid values:</maml:para>
-            <maml:para>- `asc`</maml:para>
-            <maml:para>- `desc`</maml:para>
+            <maml:para>- `invoiceDate`</maml:para>
+            <maml:para>- `dueDate`</maml:para>
+            <maml:para>- `status`</maml:para>
+            <maml:para>- `partnerName`</maml:para>
+            <maml:para>- `total`</maml:para>
+            <maml:para>- `balance`</maml:para>
+            <maml:para>- `carriedBalance`</maml:para>
             <maml:para></maml:para>
-            <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+            <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -1529,10 +1548,15 @@ Connect-Pax8 -credential $cred</dev:code>
           <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
           <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
           <maml:para>Valid values:</maml:para>
-          <maml:para>- `asc`</maml:para>
-          <maml:para>- `desc`</maml:para>
+          <maml:para>- `invoiceDate`</maml:para>
+          <maml:para>- `dueDate`</maml:para>
+          <maml:para>- `status`</maml:para>
+          <maml:para>- `partnerName`</maml:para>
+          <maml:para>- `total`</maml:para>
+          <maml:para>- `balance`</maml:para>
+          <maml:para>- `carriedBalance`</maml:para>
           <maml:para></maml:para>
-          <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+          <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
         </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -1594,7 +1618,7 @@ Connect-Pax8 -credential $cred</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>Get-Pax8Invoice -page 3 -size 1 -sort dueDate -status UnPaid</dev:code>
+        <dev:code>Get-Pax8Invoice -page 3 -size 1 -sort dueDate -status Unpaid</dev:code>
         <dev:remarks>
           <maml:para>This command gets 1 unpaid invoice on page 3 and sorts by dueDate.</maml:para>
         </dev:remarks>
@@ -2362,10 +2386,10 @@ Connect-Pax8 -credential $cred</dev:code>
             <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
             <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
             <maml:para>Valid values:</maml:para>
-            <maml:para>- `asc`</maml:para>
-            <maml:para>- `desc`</maml:para>
+            <maml:para>- `name`</maml:para>
+            <maml:para>- `vendor`</maml:para>
             <maml:para></maml:para>
-            <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+            <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -2432,10 +2456,10 @@ Connect-Pax8 -credential $cred</dev:code>
             <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
             <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
             <maml:para>Valid values:</maml:para>
-            <maml:para>- `asc`</maml:para>
-            <maml:para>- `desc`</maml:para>
+            <maml:para>- `name`</maml:para>
+            <maml:para>- `vendor`</maml:para>
             <maml:para></maml:para>
-            <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+            <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -2514,10 +2538,10 @@ Connect-Pax8 -credential $cred</dev:code>
           <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
           <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
           <maml:para>Valid values:</maml:para>
-          <maml:para>- `asc`</maml:para>
-          <maml:para>- `desc`</maml:para>
+          <maml:para>- `name`</maml:para>
+          <maml:para>- `vendor`</maml:para>
           <maml:para></maml:para>
-          <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+          <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
         </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -3029,10 +3053,14 @@ Connect-Pax8 -credential $cred</dev:code>
             <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
             <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
             <maml:para>Valid values:</maml:para>
-            <maml:para>- `asc`</maml:para>
-            <maml:para>- `desc`</maml:para>
+            <maml:para>- `quantity`</maml:para>
+            <maml:para>- `startDate`</maml:para>
+            <maml:para>- `endDate`</maml:para>
+            <maml:para>- `createdDate`</maml:para>
+            <maml:para>- `billingStart`</maml:para>
+            <maml:para>- `price`</maml:para>
             <maml:para></maml:para>
-            <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+            <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -3123,10 +3151,14 @@ Connect-Pax8 -credential $cred</dev:code>
             <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
             <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
             <maml:para>Valid values:</maml:para>
-            <maml:para>- `asc`</maml:para>
-            <maml:para>- `desc`</maml:para>
+            <maml:para>- `quantity`</maml:para>
+            <maml:para>- `startDate`</maml:para>
+            <maml:para>- `endDate`</maml:para>
+            <maml:para>- `createdDate`</maml:para>
+            <maml:para>- `billingStart`</maml:para>
+            <maml:para>- `price`</maml:para>
             <maml:para></maml:para>
-            <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+            <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -3229,10 +3261,14 @@ Connect-Pax8 -credential $cred</dev:code>
           <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
           <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
           <maml:para>Valid values:</maml:para>
-          <maml:para>- `asc`</maml:para>
-          <maml:para>- `desc`</maml:para>
+          <maml:para>- `quantity`</maml:para>
+          <maml:para>- `startDate`</maml:para>
+          <maml:para>- `endDate`</maml:para>
+          <maml:para>- `createdDate`</maml:para>
+          <maml:para>- `billingStart`</maml:para>
+          <maml:para>- `price`</maml:para>
           <maml:para></maml:para>
-          <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+          <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
         </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -3528,10 +3564,11 @@ Connect-Pax8 -credential $cred</dev:code>
             <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
             <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
             <maml:para>Valid values:</maml:para>
-            <maml:para>- `asc`</maml:para>
-            <maml:para>- `desc`</maml:para>
+            <maml:para>- `resourceGroup`</maml:para>
+            <maml:para>- `currentCharges`</maml:para>
+            <maml:para>- `partnerTotal`</maml:para>
             <maml:para></maml:para>
-            <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+            <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -3610,10 +3647,11 @@ Connect-Pax8 -credential $cred</dev:code>
             <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
             <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
             <maml:para>Valid values:</maml:para>
-            <maml:para>- `asc`</maml:para>
-            <maml:para>- `desc`</maml:para>
+            <maml:para>- `resourceGroup`</maml:para>
+            <maml:para>- `currentCharges`</maml:para>
+            <maml:para>- `partnerTotal`</maml:para>
             <maml:para></maml:para>
-            <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+            <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -3704,10 +3742,11 @@ Connect-Pax8 -credential $cred</dev:code>
           <maml:para>This parameter also creates a dynamic parameter `-direction` when used.</maml:para>
           <maml:para>This allows you to sort the results by an ascending or descending direction.</maml:para>
           <maml:para>Valid values:</maml:para>
-          <maml:para>- `asc`</maml:para>
-          <maml:para>- `desc`</maml:para>
+          <maml:para>- `resourceGroup`</maml:para>
+          <maml:para>- `currentCharges`</maml:para>
+          <maml:para>- `partnerTotal`</maml:para>
           <maml:para></maml:para>
-          <maml:para>Specifying the dynamic parameter is optional.</maml:para>
+          <maml:para>Use the dynamic `-direction` parameter to specify `asc` or `desc`. Specifying `-direction` is optional.</maml:para>
         </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -5071,7 +5110,7 @@ New-Pax8Order @newParams</dev:code>
           <maml:name>cancelDate</maml:name>
           <maml:description>
             <maml:para>The date to cancel the subscription on.</maml:para>
-            <maml:para>Valid format: `yyyy-MM-dd`</maml:para>
+            <maml:para>Valid format: ISO 8601/RFC3339 date-time, for example `2000-10-31T01:30:00.000-05:00`.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -5133,7 +5172,7 @@ New-Pax8Order @newParams</dev:code>
         <maml:name>cancelDate</maml:name>
         <maml:description>
           <maml:para>The date to cancel the subscription on.</maml:para>
-          <maml:para>Valid format: `yyyy-MM-dd`</maml:para>
+          <maml:para>Valid format: ISO 8601/RFC3339 date-time, for example `2000-10-31T01:30:00.000-05:00`.</maml:para>
         </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -5183,7 +5222,7 @@ New-Pax8Order @newParams</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>Remove-Pax8SubscriptionById -subscriptionId '5e0931ff-78ef-4e24-8db4-47c84da07ad3' -cancelDate '2022-06-25'</dev:code>
+        <dev:code>Remove-Pax8SubscriptionById -subscriptionId '5e0931ff-78ef-4e24-8db4-47c84da07ad3' -cancelDate '2000-10-31T01:30:00.000-05:00'</dev:code>
         <dev:remarks>
           <maml:para>This command cancels a subscription on the specified date.</maml:para>
         </dev:remarks>
@@ -5878,7 +5917,7 @@ Update-Pax8ContactById</dev:code>
           <maml:name>startDate</maml:name>
           <maml:description>
             <maml:para>The subscription start date.</maml:para>
-            <maml:para>Valid format: `yyyy-MM-dd`</maml:para>
+            <maml:para>Valid format: ISO 8601/RFC3339 date-time, for example `2000-10-31T01:30:00.000-05:00`.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -5891,7 +5930,7 @@ Update-Pax8ContactById</dev:code>
           <maml:name>endDate</maml:name>
           <maml:description>
             <maml:para>The subscription end date.</maml:para>
-            <maml:para>Valid format: `yyyy-MM-dd`</maml:para>
+            <maml:para>Valid format: ISO 8601/RFC3339 date-time, for example `2001-10-31T01:30:00.000-05:00`.</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -6001,7 +6040,7 @@ Update-Pax8ContactById</dev:code>
         <maml:name>endDate</maml:name>
         <maml:description>
           <maml:para>The subscription end date.</maml:para>
-          <maml:para>Valid format: `yyyy-MM-dd`</maml:para>
+          <maml:para>Valid format: ISO 8601/RFC3339 date-time, for example `2001-10-31T01:30:00.000-05:00`.</maml:para>
         </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -6050,7 +6089,7 @@ Update-Pax8ContactById</dev:code>
         <maml:name>startDate</maml:name>
         <maml:description>
           <maml:para>The subscription start date.</maml:para>
-          <maml:para>Valid format: `yyyy-MM-dd`</maml:para>
+          <maml:para>Valid format: ISO 8601/RFC3339 date-time, for example `2000-10-31T01:30:00.000-05:00`.</maml:para>
         </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -6103,7 +6142,7 @@ Update-Pax8ContactById</dev:code>
         <dev:code>$updateParams = @{
     subscriptionId      = '0ddf82c6-90ba-4008-9f06-b71982dbc34e'
     quantity            = 2
-    startDate           = '2022-07-01'
+    startDate           = '2000-10-31T01:30:00.000-05:00'
     billingTerm         = '2-Year'
     provisioningDetails = @( @{ key = 'userEmailAddress'; values = @('pgibbons@initech.lumbergh.co') } )
 }
